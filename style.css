@@ -70,17 +70,22 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 140px;
-  margin-left: 65px;
-  margin-right: 65px;
+  margin-left: auto;
+  column-gap: 130px;
 }
 
 .header__frame {
   max-width: 357px;
   max-height: 233.7px;
-  margin-right: 131px;
+}
+
+.frame__image {
+  width: 100%;
+  height: 100%;
 }
 
 .header__description {
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -118,14 +123,14 @@
 .about__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: auto;
   margin-top: 105px;
   margin-bottom: 105px;
   row-gap: 50px;
+  max-width: 540px;
 }
 
 .about__title {
-  font-family: Roboto;
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;
@@ -156,7 +161,6 @@
 
 .numbers__row {
   display: flex;
-  justify-content: center;
   column-gap: 49px;
 }
 
@@ -177,6 +181,7 @@
   flex-direction: column;
   justify-content: flex-start;
   row-gap: 50px;
+  max-width: 445px;
 }
 
 .abilities__list {
@@ -209,6 +214,7 @@
   margin-top: 20px;
   height: 4px;
   width: 445px;
+  max-width: 445px;
   border-radius: 0px;
   background: linear-gradient(to right, #34547a 78%, #c4c4c4 22%);
 }
@@ -226,7 +232,6 @@
 .video__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 100px auto;
   row-gap: 57px;
 }
@@ -425,23 +430,31 @@
 }
 
 @media (max-width: 1279px) {
+  * {
+    margin: 0;
+  }
+
   .menu {
     display: none;
   }
 
+  .header__logo {
+    margin-bottom: 67px;
+  }
+
+  .header__frame {
+    margin: auto 39px;
+    margin-bottom: 51px;
+  }
+
   .header__info {
     flex-direction: column;
-    align-items: center;
+    margin: 0;
   }
 
   .header__description {
     align-items: center;
-  }
-
-  .header__frame {
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin: auto 27px;
   }
 
   .header__title {
@@ -461,8 +474,8 @@
   }
 
   .about__content {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 26px;
+    margin-right: 26px;
   }
 
   .about__text {
@@ -471,17 +484,18 @@
 
   .numbers__content {
     flex-direction: column;
-    margin: 10% auto;
+    align-items: center;
+    margin: 74px 19px;
   }
 
-  .numbers__row {
-    justify-content: space-around;
-    margin-left: 20px;
+  .skills__abilities {
+    display: none;
   }
 
   .skills__content {
     flex-direction: column-reverse;
     row-gap: 98px;
+    margin: auto 18px;
   }
 
   .skills__image {
